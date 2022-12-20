@@ -1,6 +1,7 @@
 #!/bin/bash
 KLIPPER_PATH="${HOME}/klipper"
 SYSTEMDDIR="/etc/systemd/system"
+PLUGIN_FILE="clear_m73.py"
 
 # Step 1:  Verify Klipper has been installed
 check_klipper()
@@ -18,7 +19,7 @@ check_klipper()
 link_extension()
 {
     echo "Linking extension to Klipper..."
-    ln -sf "${SRCDIR}/clear_m73.py" "${KLIPPER_PATH}/klippy/extras/clear_m73.py"
+    ln -sf "${SRCDIR}/${PLUGIN_FILE}" "${KLIPPER_PATH}/klippy/extras/${PLUGIN_FILE}"
 }
 
 # Step 3: restarting Klipper
